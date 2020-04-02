@@ -1,0 +1,11 @@
+1.- Descargar todos los archivos subidos al repositorio GIT
+2.- Ubicar el archivo "app.py" , carpeta templates y carpeta static en el escritorio
+3.- Instalar los Requeriments
+4.- Si no tiene instalado un gestor de base de datos, instale "wampserver" o "xampp"
+5.- Iniciar los modulos de apache y mysql
+6.- Abrir una consola CMD
+7.- Escribir el comando "cd Desktop" para ubicarse en el escritorio
+8.- Escrbir el comando "py app.py"
+9.- Dirigirse a su aplicacion de internet y 
+    digitar en la barra de direccion:localhost:5000
+10.-Usar la aplicacion web

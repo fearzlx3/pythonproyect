@@ -1,0 +1,13 @@
+click
+Flask
+Flask-MySQL
+Flask-WTF
+itsdangerous
+Jinja2
+mariadb
+MarkupSafe
+pip
+PyMySQL
+setuptools
+Werkzeug
+WTForms
