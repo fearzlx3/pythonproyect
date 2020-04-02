@@ -42,8 +42,8 @@
 				<br>
 				<div>
 					<label for="">Vacuna contra: </label>
-						<select name="lista">
-							<option>Seleccione una vacuna</option>
+						<select name="lista" required="">
+							<option value="">Seleccione una vacuna</option>
 							{% for d in vacunas %}
 							<option value="{{d.Enfermedad}}">{{d.Enfermedad}}</option>
 							{% endfor %}
