@@ -1,0 +1,63 @@
+<!-- Boris Rioseco Elgueta -->
+{% extends "layout.html" %}
+{% block body %}
+<br>
+<h3>VACUNAR PACIENTE</h3>
+{% with messages2 = get_flashed_messages() %}
+{% if messages2 %}
+{% for message2 in messages2 %}
+
+
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{message2}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+{% endfor  %}
+{% endif %}
+{% endwith%}
+<br>
+	<div class="col-md-5">
+		<div class="card card-body">
+			{% for x in dates %}
+			<form action="/vacunarpaciente" method="POST">
+				
+				<div class="form-group">
+					<label for="">Rut del Paciente</label>
+					<input type="text" class="form-control" name="RutPaciente" readonly="" placeholder="Nombre Completo" value="{{x.Rut_paciente}}">	
+				</div>
+				<div>
+					<label for="">Nombre del Paciente</label>
+					<input type="text" class="form-control" name="NombrePaciente" value="{{x.Nombre_paciente}}" readonly="">	
+				</div> 
+				<br>
+				<div class="form-group">
+					<label for="">Fecha de Nacimiento del Paciente</label>
+					<br>
+					<input type="date" name="FechaNacimiento" value="{{x.Fecha_nacimiento}}" readonly="">	
+				</div> 
+				<br>
+				<div>
+					<label for="">Vacuna contra: </label>
+						<select name="lista">
+							<option>Seleccione una vacuna</option>
+							{% for d in vacunas %}
+							<option value="{{d.Enfermedad}}">{{d.Enfermedad}}</option>
+							{% endfor %}
+						</select>	
+				</div>			
+				<br>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Ingresar Vacuna</button>
+					<a href="/listarpacientes" type="submit" class="btn btn-primary">Volver</a>
+				</div>
+			</form>
+			{% endfor %}
+		</div>		
+	</div>	
+
+
+{% endblock %}

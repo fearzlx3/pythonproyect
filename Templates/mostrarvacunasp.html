@@ -1,0 +1,29 @@
+<!-- Boris Rioseco Elgueta -->
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block body %}
+<html>
+<br>
+<h3>Vacunas del paciente</h3>
+<br>
+<a href="/listarpacientes" type="submit" class="btn btn-primary">Volver Atrás</a>
+<br>
+<br>
+<table class="table table-striped table-bordered bg-white table-sm">
+	<thead>
+	<tr>
+		<td style="background: yellow;">Enfermedad</td>
+		<td style="background: orange;">Fecha de Vacuna</td>
+	</tr>
+	</thead>
+<tbody>
+		{% for x in dates %}
+			<tr>
+				<td>{{x.Enfermedad}}</td>
+				<td>{{x.Fecha_vacuna}}</td>
+			</tr>
+		{% endfor %}
+</tbody>
+</table>
+</html>
+{% endblock %}

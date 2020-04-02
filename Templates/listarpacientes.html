@@ -1,0 +1,35 @@
+<!-- Boris Rioseco Elgueta -->
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block body %}
+<html>
+<br>
+<h3>LISTA DE PACIENTES</h3>
+<a href="/crearpaciente" type="submit" class="btn btn-primary">Crear Nuevo Paciente</a>
+<a href="/" type="submit" class="btn btn-primary">Volver Atrás</a>
+<br>
+<br>
+<table class="table table-striped table-bordered bg-white table-sm">
+	<thead>
+	<tr>
+		<td style="background: yellow;">Rut del paciente</td>
+		<td style="background: yellow;">Nombre del paciente</td>
+		<td style="background: yellow;">Fecha de nacimiento</td>
+		<td style="background: orange">Vacunas</td>
+		<td style="background: orange">Enfermedad Paciente</td>
+	</tr>
+	</thead>
+<tbody>
+		{% for x in paciente %}
+			<tr>
+				<td>{{x.Rut_paciente}}</td>
+				<td>{{x.Nombre_paciente}}</td>
+				<td>{{x.Fecha_nacimiento}}</td>
+				<td><a href="/getdatos/{{x.Rut_paciente}}" class="btn btn-secondary">Agregar Vacuna</a></td>
+				<td><a href="/listarvacunas/{{x.Rut_paciente}}" class="btn btn-secondary">Ver Vacunas</a></td>
+			</tr>
+		{% endfor %}
+</tbody>
+</table>
+</html>
+{% endblock %}

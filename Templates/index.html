@@ -1,0 +1,78 @@
+<!-- Boris Rioseco Elgueta -->
+<html>
+<title>MENU DE OPCIONES</title>
+<header>BORIS RIOSECO ELGUETA</header>
+	<header>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#000;
+				color:red;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}			
+		</style>
+	</header>
+
+	<body>
+		<div id="header">
+			<ul class="nav">
+				<li><a href="">Ejecutar operaciones de pacientes</a>
+					<ul>
+						<li><a href="/listarpacientes">Pacientes</a></li>
+					</ul>
+				</li>
+				<li><a href="">Opciones de Vacunatorio</a>
+					<ul>
+						<li><a href="/mostrarvacunas">Vacunas</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

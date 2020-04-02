@@ -1,0 +1,30 @@
+<!-- Boris Rioseco Elgueta -->
+<!DOCTYPE html>
+{% extends "layout.html" %}
+{% block body %}
+<html>
+<h3>REGISTRO DE VACUNAS</h3>
+<br>
+<a href="/crearvacunas" type="submit" class="btn btn-primary">Crear nueva vacuna</a>
+<a href="/" type="submit" class="btn btn-primary">Volver Atrás</a>
+<br>
+<br>
+<table class="table table-striped table-bordered bg-white table-sm">
+	<thead>
+	<tr>
+		<td style="background: yellow;">Enfermedad</td>
+		<td style="background: orange; width: 200px" >Vacunas por enfermedad</td>
+	</tr>
+	</thead>
+<tbody>
+		{% for x in vacunas %}
+			<tr>
+				<td>{{x.Enfermedad}}</td>
+				<td>  <a href="/getvacunas/{{x.Enfermedad}}" class="btn btn-secondary">Ver Pacientes</a>    {{x.Fecha_vacuna}}</td>
+			</tr>
+		{% endfor %}
+</tbody>
+</table>
+<br>
+</html>
+{% endblock %}
